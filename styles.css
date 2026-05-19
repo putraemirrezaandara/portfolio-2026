@@ -501,8 +501,8 @@ section {
   max-width: 380px;
 }
 
-/* ─── VIDEO MODAL ─── */
-.video-modal {
+/* ─── MEDIA MODAL (video + Sketchfab) ─── */
+.media-modal {
   position: fixed;
   inset: 0;
   background: rgba(14,14,14,0.92);
@@ -515,25 +515,33 @@ section {
   transition: opacity 0.4s ease;
 }
 
-.video-modal.open {
+.media-modal.open {
   opacity: 1;
   pointer-events: auto;
 }
 
-.video-modal-inner {
+.media-modal-inner {
   position: relative;
   width: min(90vw, 1100px);
   aspect-ratio: 16/9;
   background: #000;
 }
 
-.video-modal video {
+.media-modal-content {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
-.video-modal-close {
+.media-modal-content video,
+.media-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+  display: block;
+}
+
+.media-modal-close {
   position: absolute;
   top: -48px;
   right: 0;
@@ -549,7 +557,34 @@ section {
   transition: opacity 0.3s;
 }
 
-.video-modal-close:hover { opacity: 1; }
+.media-modal-close:hover { opacity: 1; }
+
+/* ─── 3D VIEW BUTTON (Sketchfab cards) ─── */
+.project-view {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(245,244,240,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  transition: transform 0.4s ease, background 0.3s ease;
+  z-index: 2;
+}
+
+.project-card:hover .project-view {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: var(--white);
+}
 
 /* ─── SKILLS ─── */
 #skills {

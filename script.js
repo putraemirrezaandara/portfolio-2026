@@ -27,30 +27,41 @@ if (fills.length) {
   fills.forEach(f => { f.style.width = '0'; barObserver.observe(f); });
 }
 
-// Video modal — only on pages with a #videoModal element
-const modal = document.getElementById('videoModal');
+// Media modal (video + Sketchfab) — only on pages with a #mediaModal element
+const modal = document.getElementById('mediaModal');
 if (modal) {
-  const modalVideo = document.getElementById('modalVideo');
-  const modalClose = modal.querySelector('.video-modal-close');
-  const videoCards = document.querySelectorAll('.project-card[data-video]');
+  const modalContent = modal.querySelector('.media-modal-content');
+  const modalClose = modal.querySelector('.media-modal-close');
+  const mediaCards = document.querySelectorAll(
+    '.project-card[data-video], .project-card[data-sketchfab]'
+  );
 
-  const openModal = (src) => {
-    modalVideo.src = src;
+  const openVideoModal = (src) => {
+    modalContent.innerHTML =
+      `<video controls playsinline autoplay src="${src}"></video>`;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    modalVideo.play().catch(() => {});
+  };
+
+  const openSketchfabModal = (modelId) => {
+    const src = `https://sketchfab.com/models/${modelId}/embed?autostart=1&ui_theme=dark&ui_infos=0&ui_inspector=0&ui_stop=0`;
+    modalContent.innerHTML =
+      `<iframe src="${src}" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>`;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
   };
 
   const closeModal = () => {
-    modalVideo.pause();
-    modalVideo.removeAttribute('src');
-    modalVideo.load();
+    modalContent.innerHTML = '';
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
   };
 
-  videoCards.forEach(card => {
-    card.addEventListener('click', () => openModal(card.dataset.video));
+  mediaCards.forEach(card => {
+    card.addEventListener('click', () => {
+      if (card.dataset.video) openVideoModal(card.dataset.video);
+      else if (card.dataset.sketchfab) openSketchfabModal(card.dataset.sketchfab);
+    });
   });
 
   modalClose.addEventListener('click', closeModal);

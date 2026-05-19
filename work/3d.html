@@ -29,17 +29,32 @@
   <p class="work-tag reveal">02 — Discipline</p>
   <h1 class="work-title reveal">3D Design</h1>
   <p class="work-subtitle reveal">
-    Photoreal renders, product visualizations, and immersive scenes crafted in Blender and Cinema 4D.
+    Interactive 3D models, product visualizations, and immersive scenes — hosted on Sketchfab. Click any model to view it in 3D.
   </p>
 </section>
+
+<!--
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  How to wire up each Sketchfab model:
+
+  1. Open your model on sketchfab.com
+  2. Copy the MODEL_ID from the URL:
+       sketchfab.com/3d-models/my-model-name-MODEL_ID
+       (the MODEL_ID is the long alphanumeric string at the end)
+  3. Replace REPLACE_WITH_MODEL_ID below with that ID
+  4. For the thumbnail: right-click the Sketchfab model preview
+     → "Save image as" → save to assets/3d/01.jpg, 02.jpg, etc.
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-->
 
 <!-- PROJECTS -->
 <section class="work-grid-wrap">
   <div class="projects-grid reveal">
 
-    <div class="project-card project-card--featured" data-category="3d">
+    <div class="project-card project-card--featured" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_01">
       <span class="project-meta">01 — Featured</span>
-      <img class="project-media" src="../assets/3d/01.jpg" alt="3D project 01 cover" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="../assets/3d/01.jpg" alt="3D model 01 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
         <p class="project-tag">3D Design</p>
         <h3 class="project-name">Project Title 01</h3>
@@ -47,10 +62,71 @@
       </div>
     </div>
 
-    <!-- Add more 3D cards below by copy-pasting one of the .project-card blocks and incrementing the file paths to 02.jpg, 03.jpg, etc. -->
+    <div class="project-card" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_02">
+      <span class="project-meta">02</span>
+      <img class="project-media" src="../assets/3d/02.jpg" alt="3D model 02 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <p class="project-tag">3D Design</p>
+        <h3 class="project-name">Project Title 02</h3>
+        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_03">
+      <span class="project-meta">03</span>
+      <img class="project-media" src="../assets/3d/03.jpg" alt="3D model 03 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <p class="project-tag">3D Design</p>
+        <h3 class="project-name">Project Title 03</h3>
+        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_04">
+      <span class="project-meta">04</span>
+      <img class="project-media" src="../assets/3d/04.jpg" alt="3D model 04 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <p class="project-tag">3D Design</p>
+        <h3 class="project-name">Project Title 04</h3>
+        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_05">
+      <span class="project-meta">05</span>
+      <img class="project-media" src="../assets/3d/05.jpg" alt="3D model 05 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <p class="project-tag">3D Design</p>
+        <h3 class="project-name">Project Title 05</h3>
+        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="REPLACE_WITH_MODEL_ID_06">
+      <span class="project-meta">06</span>
+      <img class="project-media" src="../assets/3d/06.jpg" alt="3D model 06 thumbnail" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <p class="project-tag">3D Design</p>
+        <h3 class="project-name">Project Title 06</h3>
+        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+      </div>
+    </div>
 
   </div>
 </section>
+
+<!-- MEDIA MODAL -->
+<div class="media-modal" id="mediaModal" aria-hidden="true">
+  <div class="media-modal-inner">
+    <button class="media-modal-close" type="button" aria-label="Close">Close ×</button>
+    <div class="media-modal-content"></div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
