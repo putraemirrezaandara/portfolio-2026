@@ -3,232 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — Creative Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <title>Putra Emirreza Andara — Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">Your Name</a>
+  <a href="#hero" class="nav-logo">Putra</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
     <li><a href="#disciplines">Work</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
   </ul>
+  <a href="#cta" class="nav-cta">Let's Contact</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-left">
-    <p class="hero-tag">Multi-disciplinary Designer — Based in Jakarta</p>
-    <h1 class="hero-title">
-      Crafting<br><em>thoughtful</em><br>visual stories<br>across mediums.
-    </h1>
-    <a href="#disciplines" class="hero-cta">
-      <span class="hero-cta-line"></span>
-      View my work
-    </a>
-  </div>
-  <div class="hero-right">
-    <div class="hero-number">01</div>
-    <p class="hero-desc">
-      A designer who believes that great work lives in the tension between simplicity and intention.
+  <div class="hero-top">
+    <div class="hero-thumb">
+      <img src="assets/hero/thumb.jpg" alt="" onerror="this.style.display='none'"/>
+    </div>
+    <div></div>
+    <p class="hero-tagline">
+      Bringing your brand to life through innovative design and thoughtful strategy to create memorable experiences.
     </p>
+  </div>
+
+  <div class="hero-stage">
+    <img class="hero-portrait" src="assets/hero/portrait.png" alt="Putra Emirreza Andara" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+    <div class="hero-portrait-placeholder" style="display:none">
+      Drop portrait at<br/>assets/hero/portrait.png
+    </div>
+    <span class="hero-word">CREATIVE</span>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="about-left">
-    <div class="section-header reveal">
-      <span class="section-num">01</span>
-      <h2 class="section-title">About Me</h2>
+  <p class="section-label about-label">About Me</p>
+  <p class="about-body">
+    I'm a passionate designer with a love for transforming ideas <em>into captivating visual stories.</em> With years of experience in <strong>UI/UX, 3D, graphic design, video editing, and motion graphics</strong>, I help brands build authentic identities and craft memorable <em>experiences across every medium.</em>
+  </p>
+
+  <div class="about-stats">
+    <div class="stat-item">
+      <div class="stat-num">5+ Years</div>
+      <div class="stat-label">Experience</div>
     </div>
-    <div class="about-body reveal">
-      <p>
-        I'm a creative designer with a passion for building brands and experiences that resonate. My work lives at the intersection of strategy and aesthetics — grounded in purpose, elevated by craft.
-      </p>
-      <p>
-        I believe design is not decoration. It is the clearest form of communication a brand can have. Every choice — a typeface, a margin, a color — carries meaning.
-      </p>
-      <p>
-        When I'm not designing, you'll find me exploring architecture, photographing quiet corners of the city, or hunting for the perfect cup of coffee.
-      </p>
+    <div class="stat-item">
+      <div class="stat-num">40+</div>
+      <div class="stat-label">Projects Completed</div>
     </div>
-  </div>
-  <div class="about-right">
-    <div class="about-stats reveal">
-      <div class="stat-item">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">40+</div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">18</div>
-        <div class="stat-label">Happy Clients</div>
-      </div>
+    <div class="stat-item">
+      <div class="stat-num">+72%</div>
+      <div class="stat-label">Client Growth</div>
     </div>
   </div>
 </section>
 
-<!-- DISCIPLINES -->
-<section id="disciplines">
-  <div class="section-header reveal">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Selected Work</h2>
+<!-- SELECTED WORK / DISCIPLINES -->
+<section id="disciplines" class="section-pad">
+  <div class="section-head reveal">
+    <h2 class="section-head-title"><em>Selected</em> Work</h2>
+    <a href="work/ui-ux.html" class="btn-pill">View Design →</a>
   </div>
 
-  <div class="discipline-tiles reveal">
+  <div class="discipline-grid reveal">
 
-    <a href="work/ui-ux.html" class="discipline-tile">
-      <img class="discipline-tile-cover" src="assets/ui-ux/01.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
-      <span class="discipline-tile-num">01</span>
-      <h3 class="discipline-tile-name">UI / UX Design</h3>
-      <span class="discipline-tile-count">5 Projects</span>
-      <span class="discipline-tile-arrow"></span>
+    <a href="work/ui-ux.html" class="discipline-card">
+      <img src="assets/ui-ux/01.jpg" alt="UI/UX Design" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="discipline-card-foot">
+        <h3 class="discipline-card-name">UI / UX Design</h3>
+        <span class="discipline-card-tag">Interface</span>
+      </div>
     </a>
 
-    <a href="work/3d.html" class="discipline-tile">
-      <img class="discipline-tile-cover" src="assets/3d/01.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
-      <span class="discipline-tile-num">02</span>
-      <h3 class="discipline-tile-name">3D Design</h3>
-      <span class="discipline-tile-count">6 Projects</span>
-      <span class="discipline-tile-arrow"></span>
+    <a href="work/3d.html" class="discipline-card">
+      <img src="assets/3d/01.jpg" alt="3D Design" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="discipline-card-foot">
+        <h3 class="discipline-card-name">3D Design</h3>
+        <span class="discipline-card-tag">Modeling</span>
+      </div>
     </a>
 
-    <a href="work/graphic.html" class="discipline-tile">
-      <img class="discipline-tile-cover" src="assets/graphic/01.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
-      <span class="discipline-tile-num">03</span>
-      <h3 class="discipline-tile-name">Graphic Design</h3>
-      <span class="discipline-tile-count">1 Project</span>
-      <span class="discipline-tile-arrow"></span>
+    <a href="work/graphic.html" class="discipline-card">
+      <img src="assets/graphic/01.jpg" alt="Graphic Design" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="discipline-card-foot">
+        <h3 class="discipline-card-name">Graphic Design</h3>
+        <span class="discipline-card-tag">Branding</span>
+      </div>
     </a>
 
-    <a href="work/video.html" class="discipline-tile">
-      <img class="discipline-tile-cover" src="assets/video/01.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
-      <span class="discipline-tile-num">04</span>
-      <h3 class="discipline-tile-name">Video Editing</h3>
-      <span class="discipline-tile-count">1 Project</span>
-      <span class="discipline-tile-arrow"></span>
+    <a href="work/video.html" class="discipline-card">
+      <img src="assets/video/01.jpg" alt="Video Editing" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="discipline-card-foot">
+        <h3 class="discipline-card-name">Video Editing</h3>
+        <span class="discipline-card-tag">Film</span>
+      </div>
     </a>
 
-    <a href="work/motion.html" class="discipline-tile">
-      <img class="discipline-tile-cover" src="assets/motion/01.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
-      <span class="discipline-tile-num">05</span>
-      <h3 class="discipline-tile-name">Motion Graphics</h3>
-      <span class="discipline-tile-count">1 Project</span>
-      <span class="discipline-tile-arrow"></span>
+    <a href="work/motion.html" class="discipline-card" style="grid-column: 1 / -1; aspect-ratio: 16/7;">
+      <img src="assets/motion/01.jpg" alt="Motion Graphics" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="discipline-card-foot">
+        <h3 class="discipline-card-name">Motion Graphics</h3>
+        <span class="discipline-card-tag">Animation</span>
+      </div>
     </a>
 
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="skills-left">
-    <div class="section-header reveal">
-      <span class="section-num">03</span>
-      <h2 class="section-title">Skills</h2>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-head reveal">
+    <h2 class="section-head-title"><em>Best</em> Services</h2>
+    <a href="#cta" class="btn-pill">All Services →</a>
+  </div>
+
+  <div class="services-intro reveal">
+    <p>
+      Specializing in crafting cohesive visual systems across digital, print, and motion. Building thoughtful, well-considered work that helps brands stand out and feel intentional.
+    </p>
+  </div>
+
+  <div class="services-cols reveal">
+    <div class="service-col">
+      <p class="service-col-title">Interface</p>
+      <span class="service-item">UI Design</span>
+      <span class="service-item">UX Research</span>
+      <span class="service-item">Prototyping</span>
+      <span class="service-item">Design Systems</span>
     </div>
-    <div class="skill-group reveal">
-      <p class="skill-group-title">Disciplines</p>
-      <div class="skill-item">
-        <span class="skill-name">UI / UX Design</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">3D Design</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">Graphic Design</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">Video Editing</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">Motion Graphics</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div>
-      </div>
+    <div class="service-col">
+      <p class="service-col-title">Visual</p>
+      <span class="service-item">Brand Identity</span>
+      <span class="service-item">Logo Design</span>
+      <span class="service-item">Editorial</span>
+      <span class="service-item">Print &amp; Packaging</span>
+    </div>
+    <div class="service-col">
+      <p class="service-col-title">3D &amp; Render</p>
+      <span class="service-item">3D Modeling</span>
+      <span class="service-item">Product Viz</span>
+      <span class="service-item">Texturing</span>
+      <span class="service-item">Scene Design</span>
+    </div>
+    <div class="service-col">
+      <p class="service-col-title">Motion &amp; Video</p>
+      <span class="service-item">Motion Graphics</span>
+      <span class="service-item">Video Editing</span>
+      <span class="service-item">Kinetic Type</span>
+      <span class="service-item">Color Grading</span>
     </div>
   </div>
-  <div class="skills-right">
-    <div class="skill-group reveal" style="margin-top: 152px;">
-      <p class="skill-group-title">Tools</p>
-      <div class="skill-item">
-        <span class="skill-name">Figma</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="97%"></div></div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section id="testimonial">
+  <div class="section-head reveal">
+    <h2 class="section-head-title"><em>Clients</em> Feedback</h2>
+    <a href="#cta" class="btn-pill">Work With Me →</a>
+  </div>
+
+  <div class="testi-card reveal">
+    <img class="testi-photo" src="assets/testimonial/01.jpg" alt="" onerror="this.style.background='var(--cream)'"/>
+    <div>
+      <div class="testi-quote-mark">"</div>
+      <p class="testi-quote">
+        Putra brought a level of craft and consideration that we'd been searching for. Every detail felt intentional — the brand finally feels like ours. Working with him was the easiest creative decision we made this year.
+      </p>
+      <div class="testi-author">
+        <p class="testi-name">Michael James</p>
+        <p class="testi-role">CO-Founder, Studio Placeholder</p>
       </div>
-      <div class="skill-item">
-        <span class="skill-name">Blender / Cinema 4D</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">Adobe Photoshop / Illustrator</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="93%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">Premiere Pro / DaVinci Resolve</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
-      </div>
-      <div class="skill-item">
-        <span class="skill-name">After Effects</span>
-        <div class="skill-bar"><div class="skill-fill" data-width="84%"></div></div>
+      <div class="testi-nav">
+        <button type="button" aria-label="Previous">←</button>
+        <button type="button" aria-label="Next">→</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-left">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-num">04</span>
-        <h2 class="section-title">Contact</h2>
-      </div>
-      <h3 class="contact-headline">Let's make something <em>great</em> together.</h3>
-    </div>
-    <a href="mailto:hello@yourname.com" class="contact-email reveal">hello@yourname.com</a>
-  </div>
-  <div class="contact-right">
-    <form class="contact-form reveal" onsubmit="return false;">
-      <div class="form-field">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Jane Doe" />
-      </div>
-      <div class="form-field">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="jane@example.com" />
-      </div>
-      <div class="form-field">
-        <label for="msg">Message</label>
-        <textarea id="msg" placeholder="Tell me about your project…"></textarea>
-      </div>
-      <button class="btn-send" type="submit">
-        Send Message →
-      </button>
-    </form>
+<!-- CTA -->
+<section id="cta">
+  <p class="section-label cta-label">Have a project in mind?</p>
+  <h2 class="cta-headline"><em>Let's</em> Get Started</h2>
+  <div class="cta-actions">
+    <a href="mailto:putraemirrezaandara@gmail.com" class="btn-pill">Email Me →</a>
+    <a href="https://wa.me/" class="btn-pill" style="background: transparent; color: var(--black); border: 1px solid var(--black);">Schedule a Call</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Your Name. All rights reserved.</p>
-  <ul class="footer-socials">
-    <li><a href="#">Dribbble</a></li>
-    <li><a href="#">Behance</a></li>
-    <li><a href="#">LinkedIn</a></li>
-    <li><a href="#">Instagram</a></li>
-  </ul>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-col-title">Links</p>
+      <a href="#hero">Home</a>
+      <a href="#disciplines">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#cta">Contact</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Dribbble</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <p>Jakarta, Indonesia</p>
+      <a href="mailto:putraemirrezaandara@gmail.com">putraemirrezaandara@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">© 2026</p>
+      <p>Putra Emirreza Andara</p>
+      <p style="color: var(--gray);">All rights reserved.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <a href="#">Style Guide</a>
+    <a href="#">License</a>
+    <a href="#">Changelog</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
