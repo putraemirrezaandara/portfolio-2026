@@ -937,6 +937,67 @@ footer {
 
 .case-big-image img { width: 100%; height: auto; display: block; }
 
+/* Pull-quote callout */
+.case-pullquote {
+  font-family: var(--italic);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  line-height: 1.4;
+  color: var(--black);
+  max-width: 820px;
+  margin: 60px auto;
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  letter-spacing: -0.01em;
+}
+
+.case-pullquote::before {
+  content: '"';
+  display: block;
+  font-size: 4rem;
+  line-height: 0.4;
+  color: var(--gray-light);
+  margin-bottom: 24px;
+}
+
+.case-pullquote cite {
+  display: block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin-top: 32px;
+}
+
+/* Stats grid (for outcome metrics) */
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 24px 0 32px;
+}
+
+.case-stat-value {
+  font-family: var(--sans);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.case-stat-label {
+  font-size: 0.78rem;
+  color: var(--gray);
+  margin-top: 10px;
+  letter-spacing: 0.04em;
+}
+
 /* ─── CASE NAV (prev/next at bottom of case study) ─── */
 .case-nav {
   display: grid;
@@ -1118,6 +1179,8 @@ footer {
   .case-section-label { position: static; }
   .case-image-row--2, .case-image-row--3 { grid-template-columns: 1fr; }
   .case-nav { grid-template-columns: 1fr; padding: 40px 20px 0; margin-bottom: 60px; }
+  .case-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .case-pullquote { margin: 40px auto; padding: 24px 0; }
 }
 
 a.project-card { display: block; color: inherit; text-decoration: none; }
