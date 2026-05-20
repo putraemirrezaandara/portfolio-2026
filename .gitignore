@@ -9,6 +9,9 @@ desktop.ini
 *.swp
 *~
 
+# Claude Code (local-only config)
+.claude/
+
 # Logs
 *.log
 

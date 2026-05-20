@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell($env:Path = \"C:\\\\Program Files\\\\Git\\\\cmd;\" + $env:Path; git add .; git commit -m \"Populate UI/UX 01.html with full Lumen banking case study example + stock images\"; git push)"
-    ]
-  }
-}

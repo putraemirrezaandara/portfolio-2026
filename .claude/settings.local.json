@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\Visual Code\\\\work\\\\ui-ux\")",
-      "PowerShell($env:Path = \"C:\\\\Program Files\\\\Git\\\\cmd;\" + $env:Path; git add .; git commit -m \"Add UI/UX case study pages \\(editorial layout\\) with prev/next nav; convert UI/UX cards to clickable links\"; git push)"
-    ]
-  }
-}
