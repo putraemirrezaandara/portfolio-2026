@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project Title 04 — UI/UX — Putra Emirreza Andara</title>
+  <title>Project Title 04 — Interactive Prototype — Putra Emirreza Andara</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
@@ -24,165 +24,117 @@
 
 <!--
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  HOW TO EDIT THIS CASE STUDY:
+  INTERACTIVE PROTOTYPE LAYOUT — how to fill this in:
 
-  Update these placeholders to make this project your own:
-  - <title>...</title> (top of file)         → tab title
-  - .case-title text                          → big project name
-  - .case-subtitle                            → one-line tagline
-  - .case-meta-grid values (Role/Year/etc)    → project meta
-  - .case-actions buttons + URLs              → live site / Figma links
-  - Every <img src="..."> URL                 → upload images to Cloudinary, paste URLs
-  - Every section body text                   → fill in the story
-  - case-nav links at the bottom              → adjust prev/next
+  1. Title block (proto-header):
+     - Update <title> tag
+     - Update .proto-title text
+     - Update .proto-subtitle text
 
-  Image naming convention (on Cloudinary, in portfolio/ui-ux/):
-  - 04-hero.png          → big top image
-  - 04-img-01.png        → process visual 1
-  - 04-img-02.png        → process visual 2
-  - 04-big.png           → wide hero between sections
-  - 04-screen-01.png     → final screen 1
-  - 04-screen-02.png     → final screen 2
-  - 04-screen-03.png     → final screen 3
+  2. Sidebar (proto-sidebar):
+     - Update each .proto-info-value with real project meta
+
+  3. Embed (proto-embed):
+     - In Figma: Share > Get embed code (or Copy link)
+     - Replace the entire <div class="proto-embed-placeholder">...</div>
+       with the <iframe> from Figma
+     - Make sure the iframe doesn't have width/height attributes
+       (so it fills the container responsively)
+     - Other prototype tools (ProtoPie, Framer, CodePen) work the same way
+
+  4. Gallery (proto-gallery):
+     - 3 supporting screenshots / context images
+     - Replace each picsum URL with your real image URL
+
+  5. Prev/Next nav (at bottom): adjust if file is renamed
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 -->
 
-<article class="case-study">
+<main class="proto-layout">
 
-  <!-- HERO -->
-  <header class="case-hero">
+  <!-- HEADER -->
+  <header class="proto-header">
     <a href="../ui-ux" class="back-link reveal">Back to UI/UX</a>
-    <p class="case-tag reveal">Case Study . 04</p>
-    <h1 class="case-title reveal">Project Title 04</h1>
-    <p class="case-subtitle reveal">
-      A one-line tagline that captures what this project is and who it's for.
+    <p class="proto-tag reveal">Interactive Prototype · 04</p>
+    <h1 class="proto-title reveal">Project Title <em>04</em></h1>
+    <p class="proto-subtitle reveal">
+      A one-line description of what this prototype demonstrates — the user task it walks through, or the design pattern it explores.
     </p>
-
-    <div class="case-meta-grid reveal">
-      <div>
-        <p class="case-meta-label">Role</p>
-        <p class="case-meta-value">UI/UX Designer</p>
-      </div>
-      <div>
-        <p class="case-meta-label">Year</p>
-        <p class="case-meta-value">2026</p>
-      </div>
-      <div>
-        <p class="case-meta-label">Tools</p>
-        <p class="case-meta-value">Figma, Principle</p>
-      </div>
-      <div>
-        <p class="case-meta-label">Client</p>
-        <p class="case-meta-value">Self-initiated</p>
-      </div>
-    </div>
-
-    <div class="case-actions reveal">
-      <a href="#" class="btn-pill">Live Site →</a>
-      <a href="#" class="btn-pill" style="background: transparent; color: var(--black); border: 1px solid var(--black);">View Prototype →</a>
-    </div>
   </header>
 
-  <!-- HERO IMAGE -->
-  <figure class="case-hero-image reveal">
-    <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_1800/portfolio/ui-ux/04-hero.png" alt="Project hero" loading="lazy" onerror="this.style.opacity='0.2'"/>
-  </figure>
+  <!-- SIDEBAR + EMBED -->
+  <section class="proto-body">
 
-  <!-- 01 · CHALLENGE -->
-  <section class="case-section reveal">
-    <p class="case-section-label">01 · The Challenge</p>
-    <div>
-      <h2 class="case-section-title"><em>What</em> problem we solved.</h2>
-      <div class="case-body">
-        <p>
-          Describe the problem this project addressed. Who was the user? What were their pain points? What constraints did the project have (time, scope, technical limitations)?
-        </p>
-        <p>
-          A good challenge section <strong>frames the stakes</strong> — why this work matters, and what makes it harder than it looks at first glance.
-        </p>
+    <aside class="proto-sidebar reveal">
+      <div class="proto-info-row">
+        <p class="proto-info-label">Role</p>
+        <p class="proto-info-value">UI/UX Designer</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Year</p>
+        <p class="proto-info-value">2025</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Tools</p>
+        <p class="proto-info-value">Figma, ProtoPie</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Client</p>
+        <p class="proto-info-value">Client name</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Type</p>
+        <p class="proto-info-value">Mobile app prototype</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Duration</p>
+        <p class="proto-info-value">6 weeks</p>
+      </div>
+      <div class="proto-actions">
+        <a href="#" target="_blank" rel="noopener" class="btn-pill">Open in Figma →</a>
+        <a href="#" class="btn-pill" style="background: transparent; color: var(--black); border: 1px solid var(--black);">View Live Site →</a>
+      </div>
+    </aside>
+
+    <div class="proto-embed reveal">
+      <!--
+        Replace this entire .proto-embed-placeholder with your Figma iframe.
+
+        Example Figma embed:
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXXX%2FYYY"
+          allowfullscreen></iframe>
+
+        Get the embed URL from: Figma > Share > Get embed code
+      -->
+      <div class="proto-embed-placeholder">
+        <strong>Drop your prototype here.</strong>
+        Paste your Figma / ProtoPie / Framer iframe in place of this block.<br/>
+        See the HTML comment above for instructions.
       </div>
     </div>
+
   </section>
 
-  <!-- IMAGE PAIR -->
-  <div class="case-image-row case-image-row--2 reveal">
-    <figure>
-      <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_900/portfolio/ui-ux/04-img-01.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-      <figcaption>Research insight — caption explaining what we see.</figcaption>
-    </figure>
-    <figure>
-      <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_900/portfolio/ui-ux/04-img-02.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-      <figcaption>User flow / wireframe — caption.</figcaption>
-    </figure>
-  </div>
+  <!-- INSTRUCTIONS / CONTEXT BELOW EMBED -->
+  <p class="proto-instructions reveal">
+    Use the prototype above to <strong>walk through the flow yourself</strong>. Every screen is fully clickable — start from the home screen and complete the main task. Press <strong>'R'</strong> at any point to restart the prototype.
+  </p>
 
-  <!-- 02 · PROCESS -->
-  <section class="case-section reveal">
-    <p class="case-section-label">02 · Process</p>
-    <div>
-      <h2 class="case-section-title"><em>How</em> we got there.</h2>
-      <div class="case-body">
-        <p>
-          Walk through your design process. What research did you do? What were the early ideas? Where did you pivot, and why?
-        </p>
-        <p>
-          Specifics make this section credible: <strong>user interview count, number of iterations, key design decisions and the reasoning behind them</strong>.
-        </p>
-      </div>
-    </div>
+  <!-- SUPPORTING GALLERY -->
+  <section class="proto-gallery reveal">
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-1/700/900" alt="Supporting screenshot 1" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-2/700/900" alt="Supporting screenshot 2" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-3/700/900" alt="Supporting screenshot 3" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
   </section>
 
-  <!-- BIG IMAGE -->
-  <figure class="case-big-image reveal">
-    <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_1800/portfolio/ui-ux/04-big.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-  </figure>
-
-  <!-- 03 · SOLUTION -->
-  <section class="case-section reveal">
-    <p class="case-section-label">03 · The Solution</p>
-    <div>
-      <h2 class="case-section-title"><em>The</em> final design.</h2>
-      <div class="case-body">
-        <p>
-          Present the final product. Highlight key screens, the visual system, and the moments you're most proud of. Use captions on screens to point out specific design choices.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3-COL SCREEN GALLERY -->
-  <div class="case-image-row case-image-row--3 reveal">
-    <figure>
-      <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_700/portfolio/ui-ux/04-screen-01.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-      <figcaption>Onboarding</figcaption>
-    </figure>
-    <figure>
-      <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_700/portfolio/ui-ux/04-screen-02.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-      <figcaption>Main flow</figcaption>
-    </figure>
-    <figure>
-      <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_700/portfolio/ui-ux/04-screen-03.png" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
-      <figcaption>Confirmation</figcaption>
-    </figure>
-  </div>
-
-  <!-- 04 · OUTCOME -->
-  <section class="case-section reveal">
-    <p class="case-section-label">04 · Outcome</p>
-    <div>
-      <h2 class="case-section-title"><em>Impact &amp;</em> learnings.</h2>
-      <div class="case-body">
-        <p>
-          What changed because of this work? Use real numbers if you have them (conversion lift, task time reduction, NPS, downloads). If not, talk about qualitative wins — user quotes, stakeholder feedback, what you learned.
-        </p>
-        <p>
-          End on a <strong>reflection</strong> — what you'd do differently next time, what surprised you, what this taught you about your craft.
-        </p>
-      </div>
-    </div>
-  </section>
-
-</article>
+</main>
 
 <!-- PREV / NEXT NAV -->
 <nav class="case-nav reveal">
