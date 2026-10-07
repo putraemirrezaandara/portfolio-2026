@@ -650,6 +650,27 @@ footer {
   gap: 24px;
 }
 
+/* 3-column variant (used by the 3D library) */
+.projects-grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.projects-grid--3 .project-inner { gap: 16px; }
+
+.projects-grid--3 .project-name {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.projects-grid--3 .project-tag { flex-shrink: 0; }
+
+.work-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
 .project-card {
   position: relative;
   background: var(--cream);
@@ -1295,6 +1316,7 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .services-cols { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .projects-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-tagline { display: none; }
   .hero-top { grid-template-columns: auto 1fr; }
