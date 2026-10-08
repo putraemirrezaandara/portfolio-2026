@@ -31,129 +31,163 @@
     Interactive 3D models, product visualizations, and configurators — hosted on Sketchfab. Click any model to rotate, zoom, and inspect it in 3D.
   </p>
   <div class="work-actions reveal">
-    <a href="https://sketchfab.com/putraemirreza" target="_blank" rel="noopener" class="btn-pill">Full Library on Sketchfab →</a>
+    <a href="https://sketchfab.com/putraemirrezaa" target="_blank" rel="noopener" class="btn-pill">Full Library on Sketchfab →</a>
   </div>
 </section>
 
 <!--
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  3D LIBRARY — synced from sketchfab.com/putraemirreza
+  3D LIBRARY — loaded live from sketchfab.com/putraemirrezaa
 
-  Each card needs two things from Sketchfab:
-  - data-sketchfab="MODEL_ID"  → the long ID at the end of the model URL
-      sketchfab.com/3d-models/model-name-MODEL_ID
-  - <img src="...">            → the model's thumbnail (media.sketchfab.com)
+  script.js reads data-user on #sketchfabLibrary, asks the Sketchfab
+  API for that account's public models (most viewed first) and builds
+  the cards. New uploads appear automatically — nothing to edit here.
 
-  To add a new model: copy any .project-card block, swap the ID,
-  thumbnail, name, and tag. To change the featured model, move the
-  project-card--featured class to another card.
+  The cards written below are only a fallback shown while the API
+  loads, or if it can't be reached. To use another account, change
+  data-user.
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 -->
 
 <!-- PROJECTS -->
 <section class="work-grid-wrap">
-  <div class="projects-grid projects-grid--3 reveal">
+  <div class="projects-grid projects-grid--3 reveal" id="sketchfabLibrary" data-user="putraemirrezaa">
 
-    <div class="project-card project-card--featured" data-category="3d" data-sketchfab="15f357e5973345c790ef23a418d0b231">
+    <div class="project-card project-card--featured" data-category="3d" data-sketchfab="d506ef87065542b38b0b3179b27106eb" tabindex="0" role="button" aria-label="View Togo Fireside Green Velvet in 3D">
       <span class="project-meta">01 — Featured</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/15f357e5973345c790ef23a418d0b231/thumbnails/3ead9dc7194f45b4871a6353904bc881/9ef54ee0226f42eba486aded768cddc2.jpeg" alt="Sofatica modular sofa collection — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/d506ef87065542b38b0b3179b27106eb/thumbnails/6802ddf3a2204e93ae7d75010a2ce60c/26e30cf233af46f9b6bdbfeab8470f10.jpeg" alt="Togo Fireside Green Velvet — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Sofatica — Modular Sofa Collection</h3>
-        <p class="project-tag">Sofatica</p>
+        <h3 class="project-name">Togo Fireside Green Velvet</h3>
+        <p class="project-tag">2026</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="afa83a978bfc4a9f8d21ec046a841640">
+    <div class="project-card" data-category="3d" data-sketchfab="888c4db4755f4ee5a0efca4c721704e4" tabindex="0" role="button" aria-label="View Bubble Loveseat Green in 3D">
       <span class="project-meta">02</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/afa83a978bfc4a9f8d21ec046a841640/thumbnails/f006a1bb4d6444eb84702b2fac2161fb/ce1ffc0673f04732b6efe20ff3067f18.jpeg" alt="Titan Sanctum 20 Watch Safe — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/888c4db4755f4ee5a0efca4c721704e4/thumbnails/8c482751c7ea4855be80e4b7ba1363a1/0471b18261e541d0b0e236814fcdc6da.jpeg" alt="Bubble Loveseat Green — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Titan Sanctum™ 20 Watch Safe</h3>
-        <p class="project-tag">Enigwatch</p>
+        <h3 class="project-name">Bubble Loveseat Green</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="da3557259a254c8c83a42da963f2c933">
+    <div class="project-card" data-category="3d" data-sketchfab="42bd3730143945309306cc3be58729b5" tabindex="0" role="button" aria-label="View Togo 3 Seater Boucle White in 3D">
       <span class="project-meta">03</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/da3557259a254c8c83a42da963f2c933/thumbnails/d1cbdc159d75420e92511b54fbcd8400/95116e01c94d4e0cabced6223191217a.jpeg" alt="Macassar Ebony 75 Watch Safe — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/42bd3730143945309306cc3be58729b5/thumbnails/fd2969b578a647d4a6879684f584c06d/499948226d184193a66cfbee05501d9e.jpeg" alt="Togo 3 Seater Boucle White — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Macassar Ebony™ 75 Watch Safe</h3>
-        <p class="project-tag">Enigwatch</p>
+        <h3 class="project-name">Togo 3 Seater Boucle White</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="05cca338f14f4b1396820fc705174b27">
+    <div class="project-card" data-category="3d" data-sketchfab="ca1e86cf8e18481e94a7372ce30029fa" tabindex="0" role="button" aria-label="View The Tired Man in 3D">
       <span class="project-meta">04</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/05cca338f14f4b1396820fc705174b27/thumbnails/e52ba77e5e0743549c32f83099d2d20c/59a1017f787f4c5bb79c1c934fc3588b.jpeg" alt="Create Your Own Eames — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/ca1e86cf8e18481e94a7372ce30029fa/thumbnails/423a33bff74e4a9dbe167c764b413769/41e9e65249c644829816032f391d792e.jpeg" alt="The Tired Man — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Create Your Own Eames</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">The Tired Man</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="a1b4229416ae48a88c11c6faa675e618">
+    <div class="project-card" data-category="3d" data-sketchfab="e36db01b8a034dacadb28231143158f4" tabindex="0" role="button" aria-label="View LC2 Sofa in 3D">
       <span class="project-meta">05</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/a1b4229416ae48a88c11c6faa675e618/thumbnails/d3d3837c05ca41568653430342664b73/d6fb636ed73e455cb9a1d8b4de6e2390.jpeg" alt="Noguchi Table — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/e36db01b8a034dacadb28231143158f4/thumbnails/b4709880bdf84007aff6ba345691e195/59e8346351a2492f87cf886812bf5160.jpeg" alt="LC2 Sofa — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Noguchi Table</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">LC2 Sofa</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="278346868f764430b673e0c563e7db3b">
+    <div class="project-card" data-category="3d" data-sketchfab="4769a06050b94e34a0cb5e58d049268f" tabindex="0" role="button" aria-label="View Togo Sofa Curry Alcantara in 3D">
       <span class="project-meta">06</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/278346868f764430b673e0c563e7db3b/thumbnails/4e5a1b8921284e8f98adf83a087bdaf7/d71afe9ab5a44d7d9c6710e371079d3c.jpeg" alt="FK87 Grasshopper Lounge Chair — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/4769a06050b94e34a0cb5e58d049268f/thumbnails/168e8aec830f4930bfb70d839990146b/bfe08cd37c114f08ad4d38f188366c37.jpeg" alt="Togo Sofa Curry Alcantara — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">FK87 Grasshopper Lounge Chair</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">Togo Sofa Curry Alcantara</h3>
+        <p class="project-tag">2026</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="a7968f8860b645c48bd66d85ab98f938">
+    <div class="project-card" data-category="3d" data-sketchfab="16f1b0b3fd5642c2ba3933d2c5fc5238" tabindex="0" role="button" aria-label="View Bubble 3 Seater Green in 3D">
       <span class="project-meta">07</span>
-      <img class="project-media" src="https://media.sketchfab.com/thumbnails/4c57687b657445e1b46c83b35e494ad4/1024.jpg" alt="LC4 Chaise Lounge Chair — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/16f1b0b3fd5642c2ba3933d2c5fc5238/thumbnails/c63a44c8a9b643a38ddd99015bb7b93c/6bb3c7757e304671a6f2c2f283447f58.jpeg" alt="Bubble 3 Seater Green — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">LC4 Chaise Lounge Chair</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">Bubble 3 Seater Green</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="9ff8cdc665a944b5bb0fa55ac2272bc1">
+    <div class="project-card" data-category="3d" data-sketchfab="0882ab40e3b04c759fc0bf1f48839f50" tabindex="0" role="button" aria-label="View LC4 Chaise Lounge Chair Replica - Brown Cowhide in 3D">
       <span class="project-meta">08</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/9ff8cdc665a944b5bb0fa55ac2272bc1/thumbnails/e6716cfd2a9845f98e9fd07bbe9cb94e/e31228251e8944a1a356a91b05d56126.jpeg" alt="Egg Chair in black leather, without stool — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/0882ab40e3b04c759fc0bf1f48839f50/thumbnails/3c3657003e9b4f09bd145dd479ae3595/4c31079d84f64844a702cd2097b10672.jpeg" alt="LC4 Chaise Lounge Chair Replica - Brown Cowhide — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Egg Chair — Black Leather</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">LC4 Chaise Lounge Chair Replica - Brown Cowhide</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="d1902aa7e8e949168dd62f91cc4e7aa4">
+    <div class="project-card" data-category="3d" data-sketchfab="9415c403270445cfbd31a77e63e97a00" tabindex="0" role="button" aria-label="View Togo Sofa Green Velvet in 3D">
       <span class="project-meta">09</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/d1902aa7e8e949168dd62f91cc4e7aa4/thumbnails/122c0b0790cb459ea7aaae8e0b91a547/59c899a3469f444dbce7506d9e696c5a.jpeg" alt="Egg Chair with stool in light brown leather — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/9415c403270445cfbd31a77e63e97a00/thumbnails/03ac0e16534c4cbdb219654b8babc878/af991c1277e549ddbe5e3c4e0fb93b23.jpeg" alt="Togo Sofa Green Velvet — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Egg Chair &amp; Stool — Light Brown</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">Togo Sofa Green Velvet</h3>
+        <p class="project-tag">2026</p>
       </div>
     </div>
 
-    <div class="project-card" data-category="3d" data-sketchfab="7ecfe76d1b9e463a85418ac164ca3653">
+    <div class="project-card" data-category="3d" data-sketchfab="20afc2469327419e9d2d17d2762ad196" tabindex="0" role="button" aria-label="View Hiroshima Armchair [NEW] in 3D">
       <span class="project-meta">10</span>
-      <img class="project-media" src="https://media.sketchfab.com/models/7ecfe76d1b9e463a85418ac164ca3653/thumbnails/314d8ddbbcc9406290e4e8d9e54b43b8/3ed12dc348b24696bba2a90688c1286f.jpeg" alt="Egg Chair in light brown leather, without stool — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <img class="project-media" src="https://media.sketchfab.com/models/20afc2469327419e9d2d17d2762ad196/thumbnails/a8632bc17d554ea49ddcd3e8742069df/bc743a67be524f42bef9c25fd94b959d.jpeg" alt="Hiroshima Armchair [NEW] — 3D model" loading="lazy" onerror="this.style.display='none'"/>
       <div class="project-view" aria-hidden="true">VIEW 3D</div>
       <div class="project-inner">
-        <h3 class="project-name">Egg Chair — Light Brown Leather</h3>
-        <p class="project-tag">Furniture</p>
+        <h3 class="project-name">Hiroshima Armchair [NEW]</h3>
+        <p class="project-tag">2025</p>
       </div>
     </div>
 
+    <div class="project-card" data-category="3d" data-sketchfab="ac7d72fdbe9247c6937b7da9dae6c819" tabindex="0" role="button" aria-label="View Dune Ensemble Off White Config B in 3D">
+      <span class="project-meta">11</span>
+      <img class="project-media" src="https://media.sketchfab.com/models/ac7d72fdbe9247c6937b7da9dae6c819/thumbnails/f70f885f72894092a3803547c4ce7e10/2cfb692c170645bca4496ed9d7df65cc.jpeg" alt="Dune Ensemble Off White Config B — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <h3 class="project-name">Dune Ensemble Off White Config B</h3>
+        <p class="project-tag">2025</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="9359871fe58d40e6b305fd57d756e971" tabindex="0" role="button" aria-label="View LC2 Loveseat in 3D">
+      <span class="project-meta">12</span>
+      <img class="project-media" src="https://media.sketchfab.com/models/9359871fe58d40e6b305fd57d756e971/thumbnails/882f284a25e946d6a4a5c04ed6838c03/961f77fd6b8f43d3b35028e2b5eb05fa.jpeg" alt="LC2 Loveseat — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <h3 class="project-name">LC2 Loveseat</h3>
+        <p class="project-tag">2025</p>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="3d" data-sketchfab="a4dfe485bcaa4e19a1a49acd04e9cd12" tabindex="0" role="button" aria-label="View LC4 Chaise Lounge Chair Boucle in 3D">
+      <span class="project-meta">13</span>
+      <img class="project-media" src="https://media.sketchfab.com/models/a4dfe485bcaa4e19a1a49acd04e9cd12/thumbnails/2d27d5cb145e4ff2a174208e442f6ace/2951ef78ae7040a7b839619967568f2b.jpeg" alt="LC4 Chaise Lounge Chair Boucle — 3D model" loading="lazy" onerror="this.style.display='none'"/>
+      <div class="project-view" aria-hidden="true">VIEW 3D</div>
+      <div class="project-inner">
+        <h3 class="project-name">LC4 Chaise Lounge Chair Boucle</h3>
+        <p class="project-tag">2025</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="library-more">
+    <button class="btn-pill" id="libraryMore" type="button" hidden>Load More Models</button>
+    <p class="library-status" id="libraryStatus" aria-live="polite"></p>
   </div>
 </section>
 

@@ -25,6 +25,7 @@ body {
 }
 
 img { max-width: 100%; display: block; }
+[hidden] { display: none !important; }
 button { font: inherit; cursor: pointer; }
 a { color: inherit; text-decoration: none; }
 
@@ -664,12 +665,32 @@ footer {
 
 .projects-grid--3 .project-tag { flex-shrink: 0; }
 
+/* Sketchfab thumbnails are light grey, so the white card number disappears */
+.projects-grid--3 .project-meta { color: var(--gray); text-shadow: none; }
+
 .work-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 28px;
 }
+
+.library-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.library-more .btn-pill:disabled { opacity: 0.5; cursor: wait; }
+
+.library-status {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+.project-card:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; }
 
 .project-card {
   position: relative;
