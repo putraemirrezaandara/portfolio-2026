@@ -22,34 +22,114 @@
   <a href="../index#cta" class="nav-cta">Let's Contact</a>
 </nav>
 
-<!-- WORK HEADER -->
-<section class="work-header">
-  <a href="../index" class="back-link reveal">Back to home</a>
-  <p class="work-tag reveal">03 — Discipline</p>
-  <h1 class="work-title reveal">Graphic Design</h1>
-  <p class="work-subtitle reveal">
-    Editorial-driven branding systems, posters, packaging, and print collateral.
-  </p>
-</section>
+<!--
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  GRAPHIC DESIGN — vertical split showcase
 
-<!-- PROJECTS -->
-<section class="work-grid-wrap">
-  <div class="projects-grid reveal">
+  Left panel (.split-panel) stays pinned while the right side scrolls.
+  The right side is two columns (.split-col); the second one sits higher.
 
-    <div class="project-card project-card--featured" data-category="graphic">
-      <span class="project-meta">01 — Featured</span>
-      <img class="project-media" src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_1600/v1779289545/OTJOEH_COFFEE_0.75x_jaxu0y.png" alt="OTJOEH Coffee — Graphic Design project cover" loading="lazy" onerror="this.style.display='none'"/>
-      <div class="project-inner">
-        <p class="project-tag">Graphic Design</p>
-        <h3 class="project-name">OTJOEH Coffee</h3>
-        <p class="project-desc">Short description — concept, scope, role, or a single line that hooks the viewer.</p>
+  To add a piece: copy a .split-item block into whichever column is
+  shorter and change four things —
+    href + data-image  → the full-size image (opens in the lightbox)
+    <img src>          → the same image at a smaller width (w_900)
+    .split-item-tag    → category (Branding, Poster, Packaging…)
+    .split-item-name   → project name (also update data-title)
+
+  Items 02–06 below are stock placeholders — replace them with real work.
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-->
+
+<main class="split">
+
+  <!-- LEFT — pinned panel -->
+  <aside class="split-panel">
+    <a href="../index" class="back-link">Back to home</a>
+    <p class="split-pre">03 — Discipline</p>
+    <h1 class="split-title">Graphic <br><em>Design</em></h1>
+    <p class="split-desc">
+      Editorial-driven branding systems, posters, packaging, and print collateral. Click any piece to see it full size.
+    </p>
+    <a href="../index#cta" class="split-cta">
+      Start a project
+      <span class="split-cta-circle" aria-hidden="true">↗</span>
+    </a>
+  </aside>
+
+  <!-- RIGHT — scrolling stream -->
+  <section class="split-stream">
+    <h2 class="split-heading">Selected <br><em>Work</em></h2>
+
+    <div class="split-cols">
+
+      <div class="split-col">
+
+        <a class="split-item reveal" href="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_2000/v1779289545/OTJOEH_COFFEE_0.75x_jaxu0y.png" data-image="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_2000/v1779289545/OTJOEH_COFFEE_0.75x_jaxu0y.png" data-title="OTJOEH Coffee">
+          <span class="split-item-media">
+            <img src="https://res.cloudinary.com/putraemirreza/image/upload/q_auto,f_auto,w_900/v1779289545/OTJOEH_COFFEE_0.75x_jaxu0y.png" alt="OTJOEH Coffee — branding" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Branding</span>
+          <span class="split-item-name">OTJOEH Coffee</span>
+        </a>
+
+        <a class="split-item reveal" href="https://picsum.photos/seed/graphic-03/1600/1200" data-image="https://picsum.photos/seed/graphic-03/1600/1200" data-title="Project Title 03">
+          <span class="split-item-media">
+            <img src="https://picsum.photos/seed/graphic-03/900/675" alt="Placeholder — project 03" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Category</span>
+          <span class="split-item-name">Project Title 03</span>
+        </a>
+
+        <a class="split-item reveal" href="https://picsum.photos/seed/graphic-05/1600/2000" data-image="https://picsum.photos/seed/graphic-05/1600/2000" data-title="Project Title 05">
+          <span class="split-item-media">
+            <img src="https://picsum.photos/seed/graphic-05/900/1125" alt="Placeholder — project 05" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Category</span>
+          <span class="split-item-name">Project Title 05</span>
+        </a>
+
       </div>
+
+      <div class="split-col">
+
+        <a class="split-item reveal" href="https://picsum.photos/seed/graphic-02/1600/2000" data-image="https://picsum.photos/seed/graphic-02/1600/2000" data-title="Project Title 02">
+          <span class="split-item-media">
+            <img src="https://picsum.photos/seed/graphic-02/900/1125" alt="Placeholder — project 02" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Category</span>
+          <span class="split-item-name">Project Title 02</span>
+        </a>
+
+        <a class="split-item reveal" href="https://picsum.photos/seed/graphic-04/1600/1600" data-image="https://picsum.photos/seed/graphic-04/1600/1600" data-title="Project Title 04">
+          <span class="split-item-media">
+            <img src="https://picsum.photos/seed/graphic-04/900/900" alt="Placeholder — project 04" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Category</span>
+          <span class="split-item-name">Project Title 04</span>
+        </a>
+
+        <a class="split-item reveal" href="https://picsum.photos/seed/graphic-06/1600/1200" data-image="https://picsum.photos/seed/graphic-06/1600/1200" data-title="Project Title 06">
+          <span class="split-item-media">
+            <img src="https://picsum.photos/seed/graphic-06/900/675" alt="Placeholder — project 06" loading="lazy"/>
+          </span>
+          <span class="split-item-tag">Category</span>
+          <span class="split-item-name">Project Title 06</span>
+        </a>
+
+      </div>
+
     </div>
+  </section>
 
-    <!-- Add more Graphic cards below by copy-pasting one of the .project-card blocks and incrementing the file paths to 02.jpg, 03.jpg, etc. -->
+</main>
 
+<!-- MEDIA MODAL (image lightbox) -->
+<div class="media-modal" id="mediaModal" aria-hidden="true">
+  <div class="media-modal-inner">
+    <button class="media-modal-close" type="button" aria-label="Close">Close ×</button>
+    <div class="media-modal-content"></div>
   </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>

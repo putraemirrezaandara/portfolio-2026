@@ -33,12 +33,21 @@ const modal = document.getElementById('mediaModal');
 if (modal) {
   const modalContent = modal.querySelector('.media-modal-content');
   const modalClose = modal.querySelector('.media-modal-close');
-  const mediaCardSelector = '.project-card[data-video], .project-card[data-sketchfab]';
+  const mediaCardSelector = '.project-card[data-video], .project-card[data-sketchfab], [data-image]';
 
-  const showModal = (el) => {
+  const showModal = (el, isImage = false) => {
     modalContent.replaceChildren(el);
+    modal.classList.toggle('media-modal--image', isImage);
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+  };
+
+  // Full-size artwork lightbox (graphic design showcase)
+  const openImageModal = (src, alt) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt || '';
+    showModal(img, true);
   };
 
   const openVideoModal = (src) => {
@@ -68,11 +77,14 @@ if (modal) {
   const openCard = (card) => {
     if (card.dataset.video) openVideoModal(card.dataset.video);
     else if (card.dataset.sketchfab) openSketchfabModal(card.dataset.sketchfab);
+    else if (card.dataset.image) openImageModal(card.dataset.image, card.dataset.title);
   };
 
   document.addEventListener('click', (e) => {
     const card = e.target.closest(mediaCardSelector);
-    if (card) openCard(card);
+    if (!card) return;
+    e.preventDefault(); // image items are links to the full file when JS is off
+    openCard(card);
   });
 
   modalClose.addEventListener('click', closeModal);
