@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sohnne — Iconic Design, Within Reach — UI/UX — Putra Emirreza Andara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../../index" class="nav-logo">Putra</a>
+  <ul class="nav-links">
+    <li><a href="../../index#disciplines">Work</a></li>
+    <li><a href="../../index#about">About</a></li>
+    <li><a href="../../index#services">Services</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../index#cta" class="nav-cta">Let's Contact</a>
+  </div>
+</nav>
+
+<!--
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  HOW TO EDIT THIS CASE STUDY:
+
+  Update these placeholders to make this project your own:
+  - <title>...</title> (top of file)         → tab title
+  - .case-title text                          → big project name
+  - .case-subtitle                            → one-line tagline
+  - .case-meta-grid values (Role/Year/etc)    → project meta
+  - .case-actions buttons + URLs              → live site / Figma links
+  - Every <img src="..."> URL                 → upload images to Cloudinary, paste URLs
+  - Every section body text                   → fill in the story
+  - case-nav links at the bottom              → adjust prev/next
+
+  Image naming convention (on Cloudinary, in portfolio/ui-ux/):
+  - 01-hero.png          → big top image
+  - 01-img-01.png        → process visual 1
+  - 01-img-02.png        → process visual 2
+  - 01-big.png           → wide hero between sections
+  - 01-screen-01.png     → final screen 1
+  - 01-screen-02.png     → final screen 2
+  - 01-screen-03.png     → final screen 3
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-->
+
+<article class="case-study">
+
+  <!-- HERO -->
+  <header class="case-hero">
+    <a href="../ui-ux" class="back-link reveal">Back to UI/UX</a>
+    <p class="case-tag reveal">Case Study · 01</p>
+    <h1 class="case-title reveal">Sohnne — Iconic Design, <em>Within Reach</em>.</h1>
+    <p class="case-subtitle reveal">
+      Redesigning the e-commerce experience for a mid-century modern furniture brand built on bringing iconic designs to market at a third of the originals' price.
+    </p>
+
+    <div class="case-meta-grid reveal">
+      <div>
+        <p class="case-meta-label">Role</p>
+        <p class="case-meta-value">UI/UX Designer</p>
+      </div>
+      <div>
+        <p class="case-meta-label">Year</p>
+        <p class="case-meta-value">2024</p>
+      </div>
+      <div>
+        <p class="case-meta-label">Tools</p>
+        <p class="case-meta-value">Figma, Visual Studio Code, PostHog</p>
+      </div>
+      <div>
+        <p class="case-meta-label">Client</p>
+        <p class="case-meta-value">Sohnne Furniture</p>
+      </div>
+    </div>
+
+    <div class="case-actions reveal">
+      <a href="https://sohnne.com/" target="_blank" rel="noopener" class="btn-pill">Visit Sohnne →</a>
+      <a href="#" class="btn-pill" style="background: transparent; color: var(--black); border: 1px solid var(--black);">View Prototype →</a>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <figure class="case-hero-image reveal">
+    <img src="https://picsum.photos/seed/sohnne-hero/1800/900" alt="Sohnne homepage hero" loading="lazy" onerror="this.style.opacity='0.2'"/>
+  </figure>
+
+  <!-- 01 · CHALLENGE -->
+  <section class="case-section reveal">
+    <p class="case-section-label">01 · The Challenge</p>
+    <div>
+      <h2 class="case-section-title"><em>What</em> problem we solved.</h2>
+      <div class="case-body">
+        <p>
+          Sohnne sells <strong>$849–$4,199 furniture</strong> in a category dominated by two extremes: cheap mass-market knockoffs on one end, $10K+ originals on the other. The brand sits squarely in the middle with a clear proposition — 1:1 replicas of iconic mid-century designs at roughly a third of the originals' price — but the existing site didn't communicate that.
+        </p>
+        <p>
+          Visitors either dismissed it as "just another replica brand" or couldn't tell how it differed from generic furniture marketplaces. Bounce rate on product pages was high, and conversion sat well below e-commerce benchmarks for the price tier.
+        </p>
+        <p>
+          The challenge: build a shopping experience where the value proposition isn't just stated — it's <strong>demonstrated</strong>, on every page, in a way that builds trust over a single session.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE PAIR -->
+  <div class="case-image-row case-image-row--2 reveal">
+    <figure>
+      <img src="https://placehold.co/900x600/f7f6f2/0a0a0a/png?text=PostHog+Funnels&font=inter" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
+      <figcaption>PostHog funnels — where shoppers dropped off on the way from product page to cart to checkout.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/900x600/f7f6f2/0a0a0a/png?text=Heatmaps+%2B+Session+Replays&font=inter" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
+      <figcaption>Heatmaps and session replays — what visitors actually clicked, how far they scrolled, and where they hesitated.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 02 · PROCESS -->
+  <section class="case-section reveal">
+    <p class="case-section-label">02 · Process</p>
+    <div>
+      <h2 class="case-section-title"><em>How</em> we got there.</h2>
+      <div class="case-body">
+        <p>
+          The redesign started from behaviour data on the live site rather than assumptions. Three PostHog views did most of the work. <strong>Funnels</strong> showed where shoppers dropped off between product page, cart, and checkout. <strong>Heatmaps</strong> showed what got clicked and how far people scrolled. <strong>Session replays</strong> showed the hesitation behind the numbers — the back-and-forth a funnel chart can't explain.
+        </p>
+        <p>
+          [Add your key finding here — for example, which funnel step lost the most shoppers, what the heatmaps showed visitors skipping, and what the replays showed them doing instead.]
+        </p>
+        <p>
+          The answer was a <strong>comparison-first structure</strong>: side-by-side specs, materials, and dimensions across Sohnne / Original / Mass-Market — not in a buried FAQ, but on the home page and on every product page. Designs were worked out in Figma and built directly in code, with every key flow laid out for thumb reach on mobile before desktop.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG IMAGE -->
+  <figure class="case-big-image reveal">
+    <img src="https://picsum.photos/seed/sohnne-process/1800/800" alt="Process — wireframes, comparison tables, and the Sohnne design system" loading="lazy" onerror="this.style.opacity='0.2'"/>
+  </figure>
+
+  <!-- 03 · SOLUTION -->
+  <section class="case-section reveal">
+    <p class="case-section-label">03 · The Solution</p>
+    <div>
+      <h2 class="case-section-title"><em>The</em> final design.</h2>
+      <div class="case-body">
+        <p>
+          The redesigned homepage opens with a <strong>three-column value comparison table</strong> — Sohnne vs. the original vs. mass-market. It's the first thing visitors see, and it does the persuasion work before any product photography.
+        </p>
+        <p>
+          Product pages follow the same logic: hero shot of the piece, then immediately a comparison panel showing what makes Sohnne's version functionally equivalent to the original. The visual system is restrained — generous whitespace, large typography, a single accent — so the product photography can do the heavy lifting.
+        </p>
+        <p>
+          The <strong>Discover</strong> hub turns inspirational interior shots into shoppable layouts, surfacing related Sohnne pieces with a single tap. The <strong>Custom</strong> and <strong>Trade</strong> portals route B2B inquiries away from the main flow without cluttering the consumer experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-COL SCREEN GALLERY -->
+  <div class="case-image-row case-image-row--3 reveal">
+    <figure>
+      <img src="https://placehold.co/700x900/0a0a0a/f7f6f2/png?text=Value+Comparison&font=inter" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
+      <figcaption>Home — value comparison table front-and-center, before product photography.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/700x900/0a0a0a/f7f6f2/png?text=Product+Page&font=inter" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
+      <figcaption>Product page — hero shot, then a side-by-side specs panel against the original.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://placehold.co/700x900/0a0a0a/f7f6f2/png?text=Discover+Hub&font=inter" alt="" loading="lazy" onerror="this.style.opacity='0.2'"/>
+      <figcaption>Discover — shoppable interior layouts that link inspiration to product.</figcaption>
+    </figure>
+  </div>
+
+  <!-- 04 · OUTCOME -->
+  <section class="case-section reveal">
+    <p class="case-section-label">04 · Outcome</p>
+    <div>
+      <h2 class="case-section-title"><em>Impact &amp;</em> learnings.</h2>
+      <div class="case-body">
+        <p>
+          In the months following launch (replace these placeholders with your real numbers):
+        </p>
+        <p>
+          Home-page bounce dropped from <strong>[XX]%</strong> to <strong>[XX]%</strong>. Product-page-to-cart conversion lifted by <strong>[XX]%</strong>. Mobile session duration increased <strong>[XX]%</strong>. Trade portal inquiries grew <strong>[X]×</strong> month-over-month.
+        </p>
+        <p>
+          But the qualitative win mattered more: customer-support tickets that used to start with <em>"is this real wood?"</em> or <em>"are these the originals?"</em> largely disappeared. The site now answers those questions before they're asked.
+        </p>
+        <p>
+          What I learned: in categories where <strong>trust is the bottleneck, explaining your value is design work, not copy work</strong>. The comparison table did more for conversion than any photoshoot.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</article>
+
+<!-- PREV / NEXT NAV -->
+<nav class="case-nav reveal">
+  <a href="05" class="case-nav-link">
+    <span class="case-nav-label">← Previous</span>
+    <span class="case-nav-title">Project Title 05</span>
+  </a>
+  <a href="enigwatch" class="case-nav-link case-nav-next">
+    <span class="case-nav-label">Next →</span>
+    <span class="case-nav-title">Enigwatch — Pinnacle of Storage</span>
+  </a>
+</nav>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-col-title">Links</p>
+      <a href="../../index#hero">Home</a>
+      <a href="../../index#disciplines">Portfolio</a>
+      <a href="../../index#about">About</a>
+      <a href="../../index#cta">Contact</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Dribbble</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <p>Jakarta, Indonesia</p>
+      <a href="mailto:putraemirrezaandara@gmail.com">putraemirrezaandara@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">© 2026</p>
+      <p>Putra Emirreza Andara</p>
+      <p style="color: var(--gray);">All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>

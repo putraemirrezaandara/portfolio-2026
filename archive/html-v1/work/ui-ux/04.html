@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Title 04 — Interactive Prototype — Putra Emirreza Andara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="../../index" class="nav-logo">Putra</a>
+  <ul class="nav-links">
+    <li><a href="../../index#disciplines">Work</a></li>
+    <li><a href="../../index#about">About</a></li>
+    <li><a href="../../index#services">Services</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../index#cta" class="nav-cta">Let's Contact</a>
+  </div>
+</nav>
+
+<!--
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  INTERACTIVE PROTOTYPE LAYOUT — how to fill this in:
+
+  1. Title block (proto-header):
+     - Update <title> tag
+     - Update .proto-title text
+     - Update .proto-subtitle text
+
+  2. Sidebar (proto-sidebar):
+     - Update each .proto-info-value with real project meta
+
+  3. Embed (proto-embed):
+     - In Figma: Share > Get embed code (or Copy link)
+     - Replace the entire <div class="proto-embed-placeholder">...</div>
+       with the <iframe> from Figma
+     - Make sure the iframe doesn't have width/height attributes
+       (so it fills the container responsively)
+     - Other prototype tools (ProtoPie, Framer, CodePen) work the same way
+
+  4. Gallery (proto-gallery):
+     - 3 supporting screenshots / context images
+     - Replace each picsum URL with your real image URL
+
+  5. Prev/Next nav (at bottom): adjust if file is renamed
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-->
+
+<main class="proto-layout">
+
+  <!-- HEADER -->
+  <header class="proto-header">
+    <a href="../ui-ux" class="back-link reveal">Back to UI/UX</a>
+    <p class="proto-tag reveal">Interactive Prototype · 04</p>
+    <h1 class="proto-title reveal">Project Title <em>04</em></h1>
+    <p class="proto-subtitle reveal">
+      A one-line description of what this prototype demonstrates — the user task it walks through, or the design pattern it explores.
+    </p>
+  </header>
+
+  <!-- SIDEBAR + EMBED -->
+  <section class="proto-body">
+
+    <aside class="proto-sidebar reveal">
+      <div class="proto-info-row">
+        <p class="proto-info-label">Role</p>
+        <p class="proto-info-value">UI/UX Designer</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Year</p>
+        <p class="proto-info-value">2025</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Tools</p>
+        <p class="proto-info-value">Figma, ProtoPie</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Client</p>
+        <p class="proto-info-value">Client name</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Type</p>
+        <p class="proto-info-value">Mobile app prototype</p>
+      </div>
+      <div class="proto-info-row">
+        <p class="proto-info-label">Duration</p>
+        <p class="proto-info-value">6 weeks</p>
+      </div>
+      <div class="proto-actions">
+        <a href="#" target="_blank" rel="noopener" class="btn-pill">Open in Figma →</a>
+        <a href="#" class="btn-pill" style="background: transparent; color: var(--black); border: 1px solid var(--black);">View Live Site →</a>
+      </div>
+    </aside>
+
+    <div class="proto-embed reveal">
+      <!--
+        Replace this entire .proto-embed-placeholder with your Figma iframe.
+
+        Example Figma embed:
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXXX%2FYYY"
+          allowfullscreen></iframe>
+
+        Get the embed URL from: Figma > Share > Get embed code
+      -->
+      <div class="proto-embed-placeholder">
+        <strong>Drop your prototype here.</strong>
+        Paste your Figma / ProtoPie / Framer iframe in place of this block.<br/>
+        See the HTML comment above for instructions.
+      </div>
+    </div>
+
+  </section>
+
+  <!-- INSTRUCTIONS / CONTEXT BELOW EMBED -->
+  <p class="proto-instructions reveal">
+    Use the prototype above to <strong>walk through the flow yourself</strong>. Every screen is fully clickable — start from the home screen and complete the main task. Press <strong>'R'</strong> at any point to restart the prototype.
+  </p>
+
+  <!-- SUPPORTING GALLERY -->
+  <section class="proto-gallery reveal">
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-1/700/900" alt="Supporting screenshot 1" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-2/700/900" alt="Supporting screenshot 2" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/seed/proto-shot-3/700/900" alt="Supporting screenshot 3" loading="lazy" onerror="this.style.opacity='0.2'"/>
+    </figure>
+  </section>
+
+</main>
+
+<!-- PREV / NEXT NAV -->
+<nav class="case-nav reveal">
+  <a href="sofatica" class="case-nav-link">
+    <span class="case-nav-label">← Previous</span>
+    <span class="case-nav-title">Sofatica — Real Life</span>
+  </a>
+  <a href="05" class="case-nav-link case-nav-next">
+    <span class="case-nav-label">Next →</span>
+    <span class="case-nav-title">Project Title 05</span>
+  </a>
+</nav>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <p class="footer-col-title">Links</p>
+      <a href="../../index#hero">Home</a>
+      <a href="../../index#disciplines">Portfolio</a>
+      <a href="../../index#about">About</a>
+      <a href="../../index#cta">Contact</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Social</p>
+      <a href="#">Instagram</a>
+      <a href="#">Behance</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Dribbble</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contact</p>
+      <p>Jakarta, Indonesia</p>
+      <a href="mailto:putraemirrezaandara@gmail.com">putraemirrezaandara@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">© 2026</p>
+      <p>Putra Emirreza Andara</p>
+      <p style="color: var(--gray);">All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>
