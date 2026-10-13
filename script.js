@@ -204,3 +204,143 @@ if (library && library.dataset.user) {
   if (moreBtn) moreBtn.addEventListener('click', () => loadMore(NEXT_BATCH));
   loadMore(FIRST_BATCH);
 }
+
+// Vertical split showcase — scroll-driven animation (graphic design page).
+// 1) each piece flips up from a tilted, half-size state as it scrolls into view
+// 2) the pinned heading grows, tints, then settles back while the work passes over it
+// Both ease toward the scroll position instead of snapping to it.
+const splitStream = document.querySelector('.split-stream');
+if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const heading = splitStream.querySelector('.split-heading');
+  const cols = splitStream.querySelector('.split-cols');
+  const wide = window.matchMedia('(min-width: 901px)'); // heading is only pinned on desktop
+  const items = Array.from(splitStream.querySelectorAll('.split-item'))
+    .map(el => ({ el, cur: 1, target: 1, start: 0, end: 1, active: false }));
+  const head = { cur: 0, target: 0, start: 0, end: 1, active: false };
+  const INK = [51, 51, 51];      // heading colour at rest (#333)
+  const ACCENT = [52, 120, 246]; // brand blue
+  let primed = false;
+  let ticking = false;
+
+  const clamp01 = (n) => Math.min(1, Math.max(0, n));
+  const mix = (a, b, t) => a + (b - a) * t;
+
+  // Position in the document, ignoring any transform we have applied
+  const docTop = (el) => {
+    let y = 0;
+    for (let node = el; node; node = node.offsetParent) y += node.offsetTop;
+    return y;
+  };
+
+  const measure = () => {
+    const vh = window.innerHeight;
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - vh);
+
+    items.forEach(item => {
+      const top = docTop(item.el);
+      const height = item.el.offsetHeight;
+      item.start = top - vh - 100;                              // just below the viewport
+      item.end = Math.min(top + height - vh / 2, maxScroll);    // bottom edge at mid-screen
+      // Pieces already on screen when the page opens stay flat
+      item.active = top > vh * 0.9 && item.end - item.start > 80;
+    });
+
+    const colsTop = docTop(cols);
+    head.start = colsTop - (vh / 2 - 200);
+    head.end = Math.min(colsTop + cols.offsetHeight - vh, maxScroll);
+    head.active = wide.matches && head.end - head.start > 200;
+  };
+
+  const setTargets = () => {
+    const y = window.scrollY;
+    items.forEach(item => {
+      item.target = item.active ? clamp01((y - item.start) / (item.end - item.start)) : 1;
+    });
+    head.target = head.active ? clamp01((y - head.start) / (head.end - head.start)) : 0;
+  };
+
+  const paintItem = (item) => {
+    if (item.cur >= 0.999) {
+      item.el.style.transform = '';
+      item.el.style.opacity = '';
+      return;
+    }
+    const tilt = 90 * (1 - item.cur);
+    const scale = 0.5 + 0.5 * item.cur;
+    item.el.style.transform = `perspective(4000px) rotateX(${tilt.toFixed(2)}deg) scale(${scale.toFixed(4)})`;
+    item.el.style.opacity = (0.7 + 0.3 * item.cur).toFixed(3);
+  };
+
+  // Heading timeline: grow + fade + lean → grow more + turn accent → hold → settle back
+  const paintHeading = () => {
+    const q = head.cur;
+    if (!head.active || q <= 0.001) {
+      heading.style.transform = '';
+      heading.style.opacity = '';
+      heading.style.color = '';
+      return;
+    }
+    let scale, opacity, skew, tint;
+    if (q < 0.2) {
+      const t = q / 0.2;
+      scale = mix(1, 1.5, t); opacity = mix(1, 0.5, t); skew = mix(0, 5, t); tint = 0;
+    } else if (q < 0.4) {
+      const t = (q - 0.2) / 0.2;
+      scale = mix(1.5, 2.5, t); opacity = 0.5; skew = mix(5, 0, t); tint = t;
+    } else if (q < 0.8) {
+      scale = 2.5; opacity = 0.5; skew = 0; tint = 1;
+    } else {
+      const t = (q - 0.8) / 0.2;
+      scale = mix(2.5, 1, t); opacity = mix(0.5, 1, t); skew = 0; tint = 1 - t;
+    }
+    const rgb = INK.map((c, i) => Math.round(mix(c, ACCENT[i], tint)));
+    heading.style.transform = `scale(${scale.toFixed(4)}) skewX(${skew.toFixed(2)}deg)`;
+    heading.style.opacity = opacity.toFixed(3);
+    heading.style.color = `rgb(${rgb.join(',')})`;
+  };
+
+  const ease = (state, rate) => {
+    const gap = state.target - state.cur;
+    if (Math.abs(gap) < 0.0008) { state.cur = state.target; return false; }
+    state.cur += gap * rate;
+    return true;
+  };
+
+  const frame = () => {
+    ticking = false;
+    setTargets();
+    let moving = false;
+    items.forEach(item => { if (ease(item, 0.09)) moving = true; paintItem(item); });
+    if (ease(head, 0.12)) moving = true;
+    paintHeading();
+    if (moving) requestFrame();
+  };
+
+  const requestFrame = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(frame);
+  };
+
+  const refresh = () => {
+    measure();
+    if (!primed) {
+      // First layout: start exactly at the scroll position, no catch-up animation
+      setTargets();
+      items.forEach(item => { item.cur = item.target; });
+      head.cur = head.target;
+      primed = true;
+    }
+    requestFrame();
+  };
+
+  window.addEventListener('scroll', requestFrame, { passive: true });
+  window.addEventListener('resize', refresh);
+  window.addEventListener('load', refresh);
+  wide.addEventListener('change', refresh);
+  // Images arriving change the column heights, so re-measure as they load
+  splitStream.querySelectorAll('img').forEach(img => {
+    if (!img.complete) img.addEventListener('load', refresh, { once: true });
+  });
+  refresh();
+}

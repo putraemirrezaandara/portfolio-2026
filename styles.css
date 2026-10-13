@@ -1264,6 +1264,8 @@ footer {
 .split-panel {
   position: sticky;
   top: 0;
+  z-index: 2;
+  background: var(--white);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -1336,7 +1338,10 @@ footer {
   transform: rotate(45deg);
 }
 
-.split-stream { padding: 120px 48px 120px 0; }
+.split-stream {
+  padding: 120px 48px 120px 0;
+  overflow-x: clip; /* keeps the scaled-up heading inside this column */
+}
 
 .split-heading {
   font-size: clamp(3.5rem, 8.6vw, 8.5rem);
@@ -1347,6 +1352,13 @@ footer {
   text-align: center;
   color: #333;
   padding: 80px 0 0;
+  /* Pinned while the work scrolls over it; script.js scales and tints it */
+  position: sticky;
+  top: 120px;
+  z-index: 0;
+  transform-origin: 50% 65%;
+  will-change: transform, opacity;
+  pointer-events: none;
 }
 
 .split-heading em {
@@ -1363,13 +1375,15 @@ footer {
   gap: 30px;
   align-items: start;
   margin-top: 240px;
+  position: relative;
+  z-index: 1;
 }
 
 /* The second column sits higher, giving the staggered look */
 .split-col { display: flex; flex-direction: column; gap: 56px; }
 .split-col:nth-child(2) { margin-top: -110px; }
 
-.split-item { display: block; cursor: zoom-in; }
+.split-item { display: block; cursor: zoom-in; will-change: transform, opacity; }
 
 .split-item-media {
   display: block;
@@ -1412,7 +1426,7 @@ footer {
   .split { grid-template-columns: 1fr; }
   .split-panel { position: static; height: auto; padding: 120px 20px 40px; }
   .split-stream { padding: 0 20px 80px; }
-  .split-heading { padding-top: 24px; text-align: left; }
+  .split-heading { padding-top: 24px; text-align: left; position: static; }
   .split-cols { margin-top: 56px; gap: 20px; }
   .split-col { gap: 36px; }
   .split-col:nth-child(2) { margin-top: 48px; }
