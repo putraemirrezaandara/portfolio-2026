@@ -206,8 +206,9 @@ if (library && library.dataset.user) {
 }
 
 // Vertical split showcase — scroll-driven animation (graphic design page).
-// 1) each piece flips up from a tilted, half-size state as it scrolls into view
-// 2) the pinned heading grows, tints, then settles back while the work passes over it
+// 1) each tile flips up from a tilted, half-size state as it scrolls into view
+// 2) the heading pins part-way off the top, then grows, leans, tints and settles
+//    back while the tiles pass over it
 // Both ease toward the scroll position instead of snapping to it.
 const splitStream = document.querySelector('.split-stream');
 if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -217,7 +218,7 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
   const items = Array.from(splitStream.querySelectorAll('.split-item'))
     .map(el => ({ el, cur: 1, target: 1, start: 0, end: 1, active: false }));
   const head = { cur: 0, target: 0, start: 0, end: 1, active: false };
-  const INK = [51, 51, 51];      // heading colour at rest (#333)
+  const INK = [0, 0, 0];
   const ACCENT = [52, 120, 246]; // brand blue
   let primed = false;
   let ticking = false;
@@ -239,16 +240,25 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
     items.forEach(item => {
       const top = docTop(item.el);
       const height = item.el.offsetHeight;
-      item.start = top - vh - 100;                              // just below the viewport
-      item.end = Math.min(top + height - vh / 2, maxScroll);    // bottom edge at mid-screen
-      // Pieces already on screen when the page opens stay flat
-      item.active = top > vh * 0.9 && item.end - item.start > 80;
+      item.start = top - vh - 100;                            // just below the viewport
+      item.end = Math.min(top + height - vh / 2, maxScroll);  // bottom edge at mid-screen
+      // The first tile of each column never animates
+      const first = item.el === item.el.parentElement.firstElementChild;
+      item.active = !first && item.end - item.start > 80;
     });
 
     const colsTop = docTop(cols);
+    // Pin starts when the tile area's top edge is 200px above mid-screen…
     head.start = colsTop - (vh / 2 - 200);
-    head.end = Math.min(colsTop + cols.offsetHeight - vh, maxScroll);
+    head.end = Math.min(colsTop + cols.offsetHeight - (vh + 80), maxScroll);
     head.active = wide.matches && head.end - head.start > 200;
+    // …so the heading has to stick at whatever height it has reached by then
+    if (wide.matches) {
+      const gap = parseFloat(getComputedStyle(heading).marginBottom) || 0;
+      heading.style.top = Math.round(vh / 2 - 200 - heading.offsetHeight - gap) + 'px';
+    } else {
+      heading.style.top = '';
+    }
   };
 
   const setTargets = () => {
@@ -271,7 +281,7 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
     item.el.style.opacity = (0.7 + 0.3 * item.cur).toFixed(3);
   };
 
-  // Heading timeline: grow + fade + lean → grow more + turn accent → hold → settle back
+  // Heading timeline: grow + fade + lean → grow more + turn accent → hold → shrink back
   const paintHeading = () => {
     const q = head.cur;
     if (!head.active || q <= 0.001) {
@@ -283,7 +293,7 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
     let scale, opacity, skew, tint;
     if (q < 0.2) {
       const t = q / 0.2;
-      scale = mix(1, 1.5, t); opacity = mix(1, 0.5, t); skew = mix(0, 5, t); tint = 0;
+      scale = mix(1, 1.5, t); opacity = mix(1, 0.5, t); skew = mix(0, 5, t); tint = -1;
     } else if (q < 0.4) {
       const t = (q - 0.2) / 0.2;
       scale = mix(1.5, 2.5, t); opacity = 0.5; skew = mix(5, 0, t); tint = t;
@@ -291,12 +301,13 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
       scale = 2.5; opacity = 0.5; skew = 0; tint = 1;
     } else {
       const t = (q - 0.8) / 0.2;
-      scale = mix(2.5, 1, t); opacity = mix(0.5, 1, t); skew = 0; tint = 1 - t;
+      scale = mix(2.5, 1, t); opacity = 0.5; skew = 0; tint = 1 - t;
     }
-    const rgb = INK.map((c, i) => Math.round(mix(c, ACCENT[i], tint)));
     heading.style.transform = `scale(${scale.toFixed(4)}) skewX(${skew.toFixed(2)}deg)`;
     heading.style.opacity = opacity.toFixed(3);
-    heading.style.color = `rgb(${rgb.join(',')})`;
+    heading.style.color = tint < 0
+      ? ''
+      : `rgb(${INK.map((c, i) => Math.round(mix(c, ACCENT[i], tint))).join(',')})`;
   };
 
   const ease = (state, rate) => {
@@ -338,9 +349,5 @@ if (splitStream && !window.matchMedia('(prefers-reduced-motion: reduce)').matche
   window.addEventListener('resize', refresh);
   window.addEventListener('load', refresh);
   wide.addEventListener('change', refresh);
-  // Images arriving change the column heights, so re-measure as they load
-  splitStream.querySelectorAll('img').forEach(img => {
-    if (!img.complete) img.addEventListener('load', refresh, { once: true });
-  });
   refresh();
 }
